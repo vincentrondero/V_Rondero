@@ -1,7 +1,4 @@
-html {
-    scroll-behavior: smooth;
-    }
-    body{
+body{
     margin: 0px;
     padding: 0px;
     background-color: #FAF8F8;
@@ -10,6 +7,7 @@ html {
         list-style-type: none;
         margin: 0px;
         padding:0px;
+        width: 100%;
         overflow: hidden;
         background-color: #57B3BE;
       }
@@ -17,7 +15,6 @@ html {
       li {
         float: left;
       }
-      
       li a {
         display: block;
         color:#ffff;
@@ -27,7 +24,7 @@ html {
         text-align:center;
         font-family: Arial;
         font-weight: bold;
-        margin-right: 15px;
+        margin-right: 30px;
       }
       
       li a:hover {
@@ -37,7 +34,7 @@ html {
     #home{
         height: 720px;
         width: 100%;
-        padding-top: 0px;
+        padding: 0px;
         background-color: #57B3BE;
     
     }
@@ -49,6 +46,7 @@ html {
         height: 800px;
         width: 100%;
         padding: 0px;
+        margin-top: 200px;
         background-color: #FAF8F8;
     }
     #row4{
@@ -58,6 +56,7 @@ html {
         margin-top: 100px;
         background-image: url(Frame\ 27.png);
         border-radius: 10px 10px 10px 10px;
+
     }
     #row5{
         width: 300px;
@@ -78,8 +77,8 @@ html {
     #row7{
         width: 668px;
         height: 623px;
-        margin-left: 590px;
-        margin-top: -700px;
+        margin-left: 800px;
+        margin-top: -650px;
         background-image: url(Frame\ 24.png);
         border-radius: 20px 20px 20px 20px;
     }
@@ -96,67 +95,73 @@ html {
         transform: translate(-10px, -20px);
     }
     #Projects{
-        height: 720px;
+        height: 2300px;
         width: 100%;
         padding: 0px;
-        background-image: url(BG3.png);
+        background-color: #DEF2F1;
     }
     #row8{
-        width: 384px;
-        height: 291px;
-        margin-left: 50px;
+        width: 503px;
+        height: 340px;
+        margin-left: 85px;
         margin-top: 200px;
-        background-image: url(Frame\ 30.png);
-        border-radius: 10px 10px 10px 10px;
+        background-image: url(Mockup\ 1.png);
     }
     #row9{
-        width: 200px;
-        height: 400px;
-        margin-left: 500px;
-        margin-top: -350px;
-        background-image: url(Frame\ 21.png);
+        width: 652px;
+        height: 390px;
+        margin-left: 807px;
+        margin-top: -360px;
+        background-image: url(outside\ 1.png);
         border-radius: 20px 20px 20px 20px;
     }
     #row10{
-        width: 200px;
-        height: 400px;
-        margin-left: 750px;
-        margin-top: -400px;
-        background-image: url(Frame\ 22.png);
+        width: 652px;
+        height:  370px;
+        margin-left: 807px;
+        margin-top: 50px;
+        background-image: url(inside\ 1.png);
     }
     #row11{
-        width: 200px;
-        height: 400px;
-        margin-left: 1000px;
-        margin-top: -400px;
-        background-image: url(Frame\ 23.png);
+        width: 500px;
+        height: 590px;
+        margin-left: 85px;
+        margin-top: 110px;
+        background-image: url(poster\ 1.png);
         border-radius: 20px 20px 20px 20px;
     }
-    #row8:hover{
-        box-shadow: 10px 10px #232020;
-        transform: translate(-10px, -20px);
+    #row12{
+        width: 475px;
+        height: 158px;
+        margin-left: 788px;
+        margin-top: -220px;
+        font-family: 'Arial';
+        font-size: 16px;
     }
-    #row9:hover{
-        background-image: url(Frame\ 19.png);
-        width: 700px;
-        height: 400px;
-        transform: translate( 20px, 0px);
+    #row13{
+        width: 475px;
+        height: 158px;
+        margin-left: 85px;
+        margin-top: 350px;
+        font-family: 'Arial';
+        font-size: 16px;
     }
-    #row10:hover{
-        background-image: url(Frame\ 20.png);
-        width: 700px;
-        height: 400px;
-        transform: translate( -250px, 0px);
-    }
-    #row11:hover{
-        background-image: url(Frame\ 18.png);
-        width: 700px;
-        height: 400px;
-        transform: translate(-520px, 0px);
+    #row14{
+        width: 475px;
+        height: 158px;
+        margin-left: 788px;
+        margin-top: -250px;
+        font-family: 'Arial';
+        font-size: 16px;
     }
     #Social{
         height: 168px;
-        width: 100%;
+        width: 120%;
         padding: 0px;
         background-color: #57B3BE;
     }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }

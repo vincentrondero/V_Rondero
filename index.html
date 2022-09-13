@@ -4,12 +4,13 @@
         <title>Vincent Rondero</title>
         <link rel="icon" type="image/png" href="Frame 35.png">
         <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
         </style>
     </head>
     <body>
-        <ul>
-            <li><img src="Frame 29.png" alt="Frame29" style="height: 64px; width: 200px; margin-right: 670px; object-fit: cover;" ></li>
+        <ul id="myHeader">
+            <li><img src="Frame 29.png" alt="Frame29" style="height: 64px; width: 200px; margin-right: 600px; object-fit: cover;" ></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Projects">Projects</a></li>
@@ -44,9 +45,15 @@
                 </tr>
                 <tr>
                     <div id="row8"></div>
+                    <div id="row12"><p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></div>
+                    <div id="row13"><p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></div>
                     <div id="row9"></div>
                     <div id="row10"></div>
                     <div id="row11"></div>
+                    <div id="row14"><p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></div>
                 </tr>
             </table>
          </div>
@@ -60,6 +67,20 @@
                 </tr>
             </table>
          </div>
+         <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+        </script>
 
     </body>
 </html>
