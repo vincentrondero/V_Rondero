@@ -1,0 +1,338 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #FEFFFF;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0px; 
+  }
+#navbar {
+    background-color: #FEFFFF;
+    overflow: hidden;
+  }
+  
+#navbar a {
+    float: right;
+    color: #17242A;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+#navbar a:hover {
+    background-color: #2B787A;
+    color:  #FEFFFF;
+    border-radius: 15px;
+  }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    padding-bottom: 10px;
+}
+.container{
+    position: absolute;
+    display: inline-block;
+    margin-left: 140px;
+    margin-top: 250px;
+    font-weight: bold;
+  }
+  .typed-out{
+    overflow: hidden;
+    color:  #3AAFA9;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation: typing 2.5s steps(50, end) forwards, blinking .8s infinite;;
+    font-size: 3.6rem;
+    width: 0;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blinking {
+  from { border-color: transparent }
+  to { border-color: #2B787A; }
+}
+#FB_Logo{
+    margin-top: 370px;
+    margin-left: 150px;
+}
+#Twitter_Logo{
+    margin-top: 370px;
+    margin-left: 9px;
+}
+#FB_Logo:hover{
+    transform: translate(0px, -5px);
+    filter: drop-shadow(0px 4px 4px #DEF2F1);
+}
+#Twitter_Logo:hover{
+    transform: translate(0px, -5px);
+    filter: drop-shadow(0px 4px 4px #DEF2F1);
+}
+.ocean {
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+  }
+  
+  .wave {
+    background: url("image/Frame\ 37.png");
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+  }
+  
+  .wave:nth-of-type(2) {
+    bottom: 0;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.5;
+  }
+  
+  .wave:nth-of-type(3) {
+    bottom: 0;
+    animation: wave 20s -1s linear infinite;
+    opacity: 0.5;
+  }
+  
+  @keyframes wave {
+      0% {transform: translateX(0);}
+      50% {transform: translateX(-25%);}
+      100% {transform: translateX(-50%);}
+  }
+#About{
+    position: absolute;
+    margin-top: 320px;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(#3AAFA9,  #FEFFFF);
+}
+#Text_1{
+    color: #FAF8F8;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    font-size: 30px;
+}
+#Frame15{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 170px;
+    top: 125px;
+    background:  #FAF8F8;
+    border-radius: 0px 1px 10px 0px;
+    border-left-style: solid;
+    border-color:  #2B787A;
+}
+#Edu_Text{
+    color: #17242A;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+#Edu{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #3AAFA9;
+}
+#Frame15:hover{
+    box-shadow: 0px 10px 8px #888888;
+    transform: translate(0px, -5px);
+}
+#Frame16{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 170px;
+    top: 350px;
+    background:   #FAF8F8;
+    border-radius: 0px 1px 10px 0px;
+    border-left-style: solid;
+    border-color:  #2B787A;
+
+}
+#Skill_Text{
+    color: #17242A;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+#Skill{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #3AAFA9;
+}
+#Frame16:hover{
+    box-shadow: 0px 10px 8px #888888;
+    transform: translate(0px, -5px);
+}
+#Frame17{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 170px;
+    top: 575px;
+    background:  #FAF8F8;
+    border-radius: 0px 1px 10px 0px;
+    border-left-style: solid;
+    border-color:  #2B787A;
+
+}
+#Cert_Text{
+    color: #17242A;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+#Cert{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #3AAFA9;
+}
+#Frame17:hover{
+    box-shadow: 0px 10px 8px #888888;
+    transform: translate(0px, -5px);
+}
+#Frame18{
+    position: absolute;
+    left: 700px;
+    top: 150px;
+}
+#Project{
+    position: absolute;
+    margin-top: 1200px;
+    width: 100%;
+    height: 900px;
+    background: #17242A
+}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 250px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #FEFFFF;
+  font-size: 15px;
+  margin-right: 10px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #FEFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #3AAFA9;;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #17242A;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #2B787A;
+    color: #FEFFFF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #3AAFA9;
+  }
+  
+  #Contact {
+    border-radius: 5px;
+    background-color: #FAF8F8;
+    padding: 20px;
+    margin-top: 2120px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
