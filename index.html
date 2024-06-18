@@ -1,135 +1,251 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
     <link rel="icon" type="image/png" href="image/Frame 35.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent Rondero</title>
 </head>
-<body>
-    <div id="navbar">
-        <a href="#Contact">Contact</a>
-        <a href="#Project">Projects</a>
-        <a href="#About">About</a>
-        <a href="index.html">Home</a>
-        <img src="image/Frame 36.png" alt="Logo" style="position:absolute;">
+<body class="font-sans" style="overflow-y: auto;scrollbar-width: none; scrollbar-color: transparent transparent;">
+
+  <div id="navbar" class="bg-white-transparent shadow-md fixed top-0 w-full z-10 mx-auto flex justify-between items-center">
+      <img src="image/Frame 36.png" alt="Logo" class="h-12">
+      <div class="flex space-x-4 mr-2">
+        <a href="#Project" class="text-gray-800 hover:text-blue-600 py-2">Projects</a>
+        <a href="#About" class="text-gray-800 hover:text-blue-600 py-2">About</a>
+        <a href="#Contact" class="text-gray-800 hover:text-blue-600 py-2">Contact Us</a>
       </div>
-    <div class="container">
-    <h1 style="margin-bottom: 0px;">Hi I'am</h1>
-      <div class="typed-out">Vincent Rondero</div></div>
-    <a href="https://www.facebook.com/vincent.rondero.7/"><img src="image/FB_logo.png" alt="logo" id="FB_Logo"></a>
-    <a href="https://twitter.com/incentpatrick"><img src="image/Twitter_logo.png" alt="Logo" id="Twitter_Logo"></a>
-    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fdribbble.com%2Fvincentrondero%3Ffbclid%3DIwAR2rfAkRRcdApm3VdSqGsWZcoeBj3WzIQD0S4BxZ2Pw34aSuZ3rGYv8fBJE&h=AT1yVTkgW0LGVHXdDKIE2WYPzo2ADH9FtDicOefV4pmET5FLl7_jpNKJWnSSzgGoQBIaWu4FfMajdLlhjXdl9yLmL8LNLPm8eHIP27zHbtz-N8o5msKcOI8s9KMJNFKFdVMKHw"><img src="image/Dribble_logo.png" alt="Logo" id="Twitter_Logo"></a>
-    <a href="https://twitter.com/incentpatrick"><img src="image/LinkdIn_logo.png" alt="Logo" id="Twitter_Logo"></a>
-    <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
+  </div>
+  
+  <div class="flex flex-col justify-center h-screen bg-gradient-to-tr from-blue-500 to-purple-200 ">
+    <div class="absolute circle rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 top-20 left-8"></div>
+    <div class="absolute circle-small rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 bottom-30 left-72"></div>
+    <div class="absolute circle-small rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 bottom-10 left-5"></div>
+    <div class="bg-white-transparent shadow-xl p-3 rounded-xl max-w-md mx-10 hover:-translate-y-3 origin-top-right transition-transform transform">
+      <img class="w-full " src="image/Picture.png" alt="Profile">
+        <h1 class="text-4xl mb-2 text-white">Hi I'm</h1>
+        <div class="typed-out text-4xl font-bold text-white">Vincent Patrick Rondero</div>
+        <div class="text-md text-white"> Web Developer | UI Designer </div>
+        <div class="flex mt-4 ">
+          <div class="flex justify-left space-x-4 mt-2">
+            <button onclick="window.open('https://www.facebook.com/vincent.rondero.7')">
+              <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M880 112H144C126.3 112 112 126.3 112 144V880C112 897.7 126.3 912 144 912H880C897.7 912 912 897.7 912 880V144C912 126.3 897.7 112 880 112ZM787.6 345.5H723.7C673.6 345.5 663.9 369.3 663.9 404.3V481.4H783.5L767.9 602.1H663.9V912H539.2V602.2H434.9V481.4H539.2V392.4C539.2 289.1 602.3 232.8 694.5 232.8C738.7 232.8 776.6 236.1 787.7 237.6V345.5H787.6Z" fill="white"/>
+              </svg>                
+            </button>            
+            <button onclick="window.open('https://twitter.com/incentpatrick', '_blank')">
+              <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M226.286 112C163.25 112 112 163.25 112 226.286V797.714C112 860.75 163.25 912 226.286 912H797.714C860.75 912 912 860.75 912 797.714V226.286C912 163.25 860.75 112 797.714 112H226.286ZM756.821 262L571.464 473.786L789.5 762H618.786L485.214 587.179L332.179 762H247.357L445.571 535.393L236.464 262H411.464L532.357 421.821L672 262H756.821ZM689.321 711.286L385.929 310.036H335.393L642.179 711.286H689.143H689.321Z" fill="white"/>
+              </svg>
+            </button>
+            <button onclick="window.open('https://dribbble.com/vincentrondero', '_blank')">
+              <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M498.6 432C457.8 359.5 413.9 298.6 407.4 289.7C338.6 322.2 287.1 385.6 271.2 461.9C282.2 462.1 383.6 462.6 498.6 432ZM565.1 453.8C570.8 465.5 576.3 477.4 581.4 489.4C583.2 493.6 585 497.8 586.7 502.1C668.5 491.8 749.9 508.3 758 510C757.5 451.9 736.7 398.6 702.5 356.7C697.2 363.8 656 416.7 565.1 453.8ZM880 112H144C126.3 112 112 126.3 112 144V880C112 897.7 126.3 912 144 912H880C897.7 912 912 897.7 912 880V144C912 126.3 897.7 112 880 112ZM512 800C353.2 800 224 670.8 224 512C224 353.2 353.2 224 512 224C670.8 224 800 353.2 800 512C800 670.8 670.8 800 512 800ZM601.7 540.9C633.9 629.3 647 701.3 649.5 716.3C704.7 679 744 619.9 754.9 551.4C746.5 548.8 678.8 528.6 601.7 540.9ZM529.2 514.5C532.4 513.5 535.6 512.5 538.9 511.6C532.7 497.6 526 483.6 519 469.9C396.2 506.7 276.9 505.1 266.2 504.9C266.1 507.4 266.1 509.9 266.1 512.4C266.1 575.6 290 633.3 329.3 676.9C334.8 667.3 402.3 555.5 529.2 514.5ZM675.1 328.3C645.49 301.955 609.934 283.179 571.479 273.583C533.025 263.987 492.817 263.855 454.3 273.2C461.1 282.3 505.8 343.1 546.1 417.2C633.6 384.4 670.6 334.6 675.1 328.3ZM554 552.8C415.3 601.1 365.4 697.4 361 706.4C402.7 738.9 455.1 758.3 512 758.3C546.1 758.3 578.6 751.4 608.1 738.8C604.4 717.2 590.2 642 555.6 552.2L554 552.8Z" fill="white"/>
+              </svg>
+            </button>
+            <button onclick="window.open('https://www.linkedin.com/in/vincent-patrick-rondero-vpsr03', '_blank')" >
+              <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M810.667 128C833.298 128 855.003 136.99 871.006 152.994C887.01 168.997 896 190.702 896 213.333V810.667C896 833.298 887.01 855.003 871.006 871.006C855.003 887.01 833.298 896 810.667 896H213.333C190.702 896 168.997 887.01 152.994 871.006C136.99 855.003 128 833.298 128 810.667V213.333C128 190.702 136.99 168.997 152.994 152.994C168.997 136.99 190.702 128 213.333 128H810.667ZM789.333 789.333V563.2C789.333 526.31 774.679 490.931 748.594 464.846C722.509 438.761 687.13 424.107 650.24 424.107C613.973 424.107 571.733 446.293 551.253 479.573V432.213H432.213V789.333H551.253V578.987C551.253 546.133 577.707 519.253 610.56 519.253C626.402 519.253 641.596 525.547 652.798 536.749C664 547.951 670.293 563.144 670.293 578.987V789.333H789.333ZM293.547 365.227C312.557 365.227 330.789 357.675 344.232 344.232C357.675 330.789 365.227 312.557 365.227 293.547C365.227 253.867 333.227 221.44 293.547 221.44C274.423 221.44 256.082 229.037 242.56 242.56C229.037 256.082 221.44 274.423 221.44 293.547C221.44 333.227 253.867 365.227 293.547 365.227ZM352.853 789.333V432.213H234.667V789.333H352.853Z" fill="white"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div id="Project" class="w-full p-4 bg-gradient-to-br from-blue-500 to-purple-200">
+    <div id="Text_1" class="w-full text-2xl font-semibold flex item-center justify-center m-2">PROJECTS</div>
+    <div class="flex flex-wrap justify-center mb-3">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+        <img class="w-full" src="image/Mockup8.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">HRMIS</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Python</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Django</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">PostgreSQL</span>
+        </div>
       </div>
-    <div id="About">
-        <div id="Text_1">ABOUT</div>
-        <div id="Frame15"><h2 id="Edu">Education</h2><p id="Edu_Text">Currently a 3rd year student taking Bachelor of Science in Information Technology: Major in Business Analytics at Batangas State University.</p></div>
-        <div id="Frame16"><h2 id="Skill">Skills</h2><p id="Skill_Text">I have a basic knowledge in programming and databases. Recently I’m learning UI/UX design and Low Fidelity prototyping.</p></div>
-        <div id="Frame17"><h2 id="Cert">Certification</h2><p id="Cert_Text">*NC II for Elictrical Installation and Maintenance.
-            <br>*Currently Taking a online course for UI/UX Design for Beginner.</p></div>
-        <div id="Frame18">  <img src="image/Group 3.png" alt="Logo"></div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+        <img class="w-full" src="image/Mockup6.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">FMIS</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Python</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Django</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+        <img class="w-full" src="image/Mockup5.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">PORKPAL</div>
+          <p class="text-gray-700 text-base">
+            PORKPALS is a mobile application, and is intended for use for small farmers, specifically backyard piggery farmers to help them manage and maintain their farm.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Typesript</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Ionic</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Firebase</span>
+        </div>
+      </div>
+
     </div>
-    <div id="Project">
-        <div id="Text_1">Projects</div>
-        <div class="slideshow-container">
 
-            <div class="mySlides fade">
-              <img src="image/Mockup 2.png" style="width:100%">
-              <div class="text">Auxilium is a crowdfunding app that aims to aid student researchers to enlive their work by giving them the ability to promoteit topeopleby gathering small amounts of funds from a large number of people to finance their work. Through Auxilium and with the help of social media platforms, the project promotion expands the opportunity to be recognized and to be funded for its future advancements. This innovative way of source funding will let their potential and ideas expand for every project they create. This app also helps student researcher(s) project to be marketed once it got its target fund. As long as the project is school-based, Auxilium can promote it for fundraising.</div>
-            </div>
+    <div class="flex flex-wrap justify-center mb-3">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+        <img class="w-full" src="image/Mockup1.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Iron Meet Wood</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+        <img class="w-full" src="image/Mockup2.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Care for Juan</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+        <img class="w-full" src="image/Mockup3.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">MediSearch</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+        </div>
+      </div>
 
-            <div class="mySlides fade">
-
-                <img src="image/Mockup 4.png" style="width:100%">
-                <div class="text">Auxilium is a crowdfunding app that aims to aid student researchers to enlive their work by giving them the ability to promoteit topeopleby gathering small amounts of funds from a large number of people to finance their work. Through Auxilium and with the help of social media platforms, the project promotion expands the opportunity to be recognized and to be funded for its future advancements. This innovative way of source funding will let their potential and ideas expand for every project they create. This app also helps student researcher(s) project to be marketed once it got its target fund. As long as the project is school-based, Auxilium can promote it for fundraising.</div>
-              </div>
-            
-            <div class="mySlides fade">
-              <img src="image/outside 2.png" style="width:100%">
-              <div class="text">A simple Brochure promoting tourism of our country. A design done for my sister's final project in Araling Panlipunan. The color scheme on the front follow a warm palette to attract attention with the main image of beach in El Nido Palawan to showcase the tropical vibe of the Phillipines.the inside focus on images rather than words keep the tourist wander what's about the place look rather than explain it in text form.</div>
-            </div>
-            
-            <div class="mySlides fade">
-              <img src="image/inside 2.png" style="width:100%">
-              <div class="text">A simple Brochure promoting tourism of our country. A design done for my sister's final project in Araling Panlipunan. The color scheme on the front follow a warm palette to attract attention with the main image of beach in El Nido Palawan to showcase the tropical vibe of the Phillipines.the inside focus on images rather than words keep the tourist wander what's about the place look rather than explain it in text form.</div>
-            </div>
-
-            
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-            
-            </div>
-            <br>
-            
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <span class="dot" onclick="currentSlide(3)"></span> 
-              <span class="dot" onclick="currentSlide(4)"></span> 
-            </div>
     </div>
-<div id="Contact">
-    <h3>Contact Form</h3>
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <div class="flex flex-wrap justify-center mb-3">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+        <img class="w-full" src="image/Mockup4.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Licensed Check</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+        <img class="w-full" src="image/Mockup 2.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Auxilium</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+        <img class="w-full" src="image/Mockup7.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Bangtang Sole</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+        </div>
+      </div>
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
 
-    <input type="submit" value="Submit">
-  </form>
+  </div>
+
+  <div id="About" class="w-full h-screen p-4 bg-blue-200 rounded-lg">
+    <div id="Text_1" class="text-2xl font-semibold">ABOUT</div>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white-transparent mb-10">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+    </div>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+    </div>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white-transparent mb-10">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+    </div>
 </div>
-<footer>
-<p style="text-align:center;">©Copyright Reserved</p>
-</footer>
-    <script>
-        window.onscroll = function() {myFunction()};
-        
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-        let slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-        </script>
+  <div id="Contact" class="container mx-auto mt-8 p-4 bg-gray-100 rounded-lg">
+      <h3 class="text-2xl font-semibold mb-4">Contact Form</h3>
+      <form action="/action_page.php">
+          <div class="mb-4">
+              <label for="fname" class="block text-gray-700">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name.." class="mt-1 p-2 border rounded w-full">
+          </div>
+          <div class="mb-4">
+              <label for="lname" class="block text-gray-700">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name.." class="mt-1 p-2 border rounded w-full">
+          </div>
+          <div class="mb-4">
+              <label for="subject" class="block text-gray-700">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." class="mt-1 p-2 border rounded w-full h-48"></textarea>
+          </div>
+          <input type="submit" value="Submit" class="bg-blue-500 text-white p-2 rounded cursor-pointer hover:bg-blue-600">
+      </form>
+  </div>
+  <footer class="mt-8 p-4 bg-gray-800 text-white text-center">
+      <p>©Copyright Reserved</p>
+  </footer>
+  
 </body>
 </html>
