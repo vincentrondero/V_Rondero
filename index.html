@@ -3,26 +3,48 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="javascript.js"></script>
     <link rel="icon" type="image/png" href="image/Frame 35.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent Rondero</title>
 </head>
-<body class="font-sans" style="overflow-y: auto;scrollbar-width: none; scrollbar-color: transparent transparent;">
-
-  <div id="navbar" class="bg-white-transparent shadow-md fixed top-0 w-full z-10 mx-auto flex justify-between items-center">
-      <img src="image/Frame 36.png" alt="Logo" class="h-12">
-      <div class="flex space-x-4 mr-2">
-        <a href="#Project" class="text-gray-800 hover:text-blue-600 py-2">Projects</a>
-        <a href="#About" class="text-gray-800 hover:text-blue-600 py-2">About</a>
-        <a href="#Contact" class="text-gray-800 hover:text-blue-600 py-2">Contact Us</a>
-      </div>
-  </div>
+<body class="font-sans" style="overflow-y: auto; scrollbar-color: transparent transparent;">
+<div class="bg-gradient-to-br from-blue-500 via-purple-300 to-white fixed inset-0 overflow-y-auto">
   
-  <div class="flex flex-col justify-center h-screen bg-gradient-to-tr from-blue-500 to-purple-200 ">
-    <div class="absolute circle rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 top-20 left-8"></div>
-    <div class="absolute circle-small rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 bottom-30 left-72"></div>
-    <div class="absolute circle-small rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 bottom-10 left-5"></div>
+  <div class="absolute circle rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 top-20 left-8"></div>
+  <div class="absolute circle-small rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 top-50 right-20"></div>
+  <div class="absolute circle rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 bottom-5 right-20"></div>
+  <div class="absolute circle-small rounded-full bg-gradient-to-br from-blue-600 to-green-300 opacity-80 bottom-10 left-5"></div>
+
+  <div id="navbar" class="bg-white-transparent shadow-md fixed z-10 top-0 w-full mx-auto flex justify-between items-center px-4 py-2">
+    <img src="image/Frame 36.png" alt="Logo" class="h-12">
+    <button id="navToggle" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div id="navLinks" class="hidden md:flex space-x-8">
+        <a href="#Project" class="text-gray-800 hover:text-blue-600 px-2 py-2 bg-blue-transparent">Projects</a>
+        <a href="#About" class="text-gray-800 hover:text-blue-600 px-2 py-2 bg-blue-transparent">About</a>
+        <a href="#Contact" class="text-gray-800 hover:text-blue-600 px-2 py-2 bg-blue-transparent">Contact</a>
+    </div>
+</div>
+<div id="overlay" class="hidden absolute inset-0 bg-opacity-0 z-10"></div>
+<div id="mobileNavLinks" class="md:hidden bg-white-transparent shadow-md h-full p-4 pt-20 space-y-2 fixed z-10 transition-transform duration-300 transform translate-x-full w-60 right-0 border-l-2 border-white">
+  <button id="closeSidebar" class="absolute top-4 left-4 ">
+    <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+  <a href="#Project" class="block text-gray-800 hover:text-blue-600 py-2 bg-blue-transparent">Projects</a>
+  <a href="#About" class="block text-gray-800 hover:text-blue-600 py-2 bg-blue-transparent">About</a>
+  <a href="#Contact" class="block text-gray-800 hover:text-blue-600 py-2 bg-blue-transparent">Contact Us</a>
+</div>
+  
+    <div class="flex flex-col justify-center h-screen">
     <div class="bg-white-transparent shadow-xl p-3 rounded-xl max-w-md mx-10 hover:-translate-y-3 origin-top-right transition-transform transform">
       <img class="w-full " src="image/Picture.png" alt="Profile">
         <h1 class="text-4xl mb-2 text-white">Hi I'm</h1>
@@ -55,161 +77,150 @@
     </div>
   </div>
 
-  <div id="Project" class="w-full p-4 bg-gradient-to-br from-blue-500 to-purple-200">
-    <div id="Text_1" class="w-full text-2xl font-semibold flex item-center justify-center m-2">PROJECTS</div>
+  <div id="Project" class="w-full p-4">
+    <div id="Text_1" class="w-full text-2xl font-semibold flex item-center justify-center m-2 text-white">PROJECTS</div>
     <div class="flex flex-wrap justify-center mb-3">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent animate__animated">
         <img class="w-full" src="image/Mockup8.png" alt="Sunset in the mountains">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">HRMIS</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          <div class="font-bold text-xl mb-2 hover:text-white">HRMIS</div>
+          <p class="text-gray-700 text-base h-32 overflow-y-auto">
+            The HRMIS project for DICT is focused on improving human resource management by streamlining the process of generating payslips. 
           </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Python</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Django</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">PostgreSQL</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Python</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Django</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">PostgreSQL</span>
         </div>
       </div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent animate__animated">
         <img class="w-full" src="image/Mockup6.png" alt="Sunset in the mountains">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">FMIS</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          <p class="text-gray-700 text-base h-32 overflow-y-auto">
+            This FMIS is designed for Goodwill Agro-Industrial Development Corporation, targeting the enhancement of farm management through data-driven insights. 
           </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Python</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Django</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">PostgreSQL</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Python</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">Django</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700  mr-2 mb-2">PostgreSQL</span>
         </div>
       </div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent animate__animated">
         <img class="w-full" src="image/Mockup5.png" alt="Sunset in the mountains">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">PORKPAL</div>
-          <p class="text-gray-700 text-base">
-            PORKPALS is a mobile application, and is intended for use for small farmers, specifically backyard piggery farmers to help them manage and maintain their farm.
+          <p class="text-gray-700 text-base h-32 overflow-y-auto">
+            PORKPAL is a mobile application, and is intended for use for small farmers, specifically backyard piggery farmers to help them manage and maintain their farm.
           </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Typesript</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Ionic</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Firebase</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Typesript</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Ionic</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Firebase</span>
         </div>
       </div>
 
     </div>
-
+    <div id="Text_1" class="w-full text-2xl font-semibold flex item-center justify-center m-2 text-white">DESIGNS</div>
     <div class="flex flex-wrap justify-center mb-3">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent animate__animated">
         <img class="w-full" src="image/Mockup1.png" alt="Sunset in the mountains">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Iron Meet Wood</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          <p class="text-gray-700 text-base h-32 overflow-y-auto">
+            The concept of this project is carving in wood but instead of wood I played with the main color of the logo to make more of a rustic look rather than a typical wood craft company.
           </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
         </div>
       </div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent animate__animated ">
         <img class="w-full" src="image/Mockup2.png" alt="Sunset in the mountains">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Care for Juan</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
+          <p class="text-gray-700 text-base h-32 overflow-y-auto">
+            Care4Juan Technology is a pioneering technology company dedicated to revolutionizing public service delivery for Local Government Units (LGUs) with innovative and user-centric solutions. Our mission is to empower LGUs to efficiently and effectively serve their constituents through cutting-edge technological advancements.          </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
         </div>
       </div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent animate__animated ">
         <img class="w-full" src="image/Mockup3.png" alt="Sunset in the mountains">
-        <div class="px-6 py-4">
+        <div class="px-6 py-4 ">
           <div class="font-bold text-xl mb-2">MediSearch</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
+          <p class="text-gray-700 text-base h-32 overflow-y-auto">
+            MediSearch is a mobile application designed to tackle the challenge of locating nearby drugstores and essential medicines.          </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
         </div>
       </div>
 
     </div>
 
     <div class="flex flex-wrap justify-center mb-3">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent animate__animated">
         <img class="w-full" src="image/Mockup4.png" alt="Sunset in the mountains">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Licensed Check</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
+          <p class="text-gray-700 text-base h-32 overflow-y-auto">
+            LicensedCheck is a mobile application designed for checkpoint operations that scans and verifies driver's and vehicle registrations. This creative approach seeks to eliminate the need for manually operated driver and vehicle information verification, lessen traffic generated by the process, and give land transportation office employees an easy-to-use tool for quickly scanning and validating.</p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
         </div>
       </div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent animate__animated">
         <img class="w-full" src="image/Mockup 2.png" alt="Sunset in the mountains">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Auxilium</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          <p class="text-gray-700 text-base h-32 overflow-y-auto">
+            CrowdFunding Application          
           </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
         </div>
       </div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-2 bg-white-transparent animate__animated">
         <img class="w-full" src="image/Mockup7.png" alt="Sunset in the mountains">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Bangtang Sole</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          <p class="text-gray-700 text-base h-32 overflow-y-auto">
+            Draft for a Shoe E-commerce          
           </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
-          <span class="inline-block bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Figma</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Canva</span>
+          <span class="inline-block hover:bg-white bg-white-transparent rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Iconify</span>
         </div>
       </div>
-
     </div>
 
   </div>
 
-  <div id="About" class="w-full h-screen p-4 bg-blue-200 rounded-lg">
-    <div id="Text_1" class="text-2xl font-semibold">ABOUT</div>
+  <div id="About" class="w-11/12 p-4 bg-white-transparent rounded-xl mx-auto">
+    <div id="Text_1" class="text-2xl font-semibold flex justify-center">WHAT I DO?</div>
+    <div class="flex space-x-4 justify-center">
     <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white-transparent mb-10">
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-    </div>
-    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <div class="font-bold text-xl mb-2">UI Desing</div>
         <p class="text-gray-700 text-base">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
         </p>
@@ -217,12 +228,144 @@
     </div>
     <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white-transparent mb-10">
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <div class="font-bold text-xl mb-2">Front-End Development</div>
         <p class="text-gray-700 text-base">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
         </p>
       </div>
     </div>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white-transparent mb-10">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Dashboard DevelopmentT</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="Text_1" class="text-2xl font-semibold flex justify-center">TECH STACK</div>
+  <div id="Text_1" class="text-xl font-semibold">Primary Stack</div>
+  <div class="flex space-x-4 justify-between">  
+    <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4 flex-col">
+      <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M880 112H144C126.3 112 112 126.3 112 144V880C112 897.7 126.3 912 144 912H880C897.7 912 912 897.7 912 880V144C912 126.3 897.7 112 880 112ZM787.6 345.5H723.7C673.6 345.5 663.9 369.3 663.9 404.3V481.4H783.5L767.9 602.1H663.9V912H539.2V602.2H434.9V481.4H539.2V392.4C539.2 289.1 602.3 232.8 694.5 232.8C738.7 232.8 776.6 236.1 787.7 237.6V345.5H787.6Z" fill="white"/>
+      </svg> 
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Class
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4 flex-col">
+      <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M880 112H144C126.3 112 112 126.3 112 144V880C112 897.7 126.3 912 144 912H880C897.7 912 912 897.7 912 880V144C912 126.3 897.7 112 880 112ZM787.6 345.5H723.7C673.6 345.5 663.9 369.3 663.9 404.3V481.4H783.5L767.9 602.1H663.9V912H539.2V602.2H434.9V481.4H539.2V392.4C539.2 289.1 602.3 232.8 694.5 232.8C738.7 232.8 776.6 236.1 787.7 237.6V345.5H787.6Z" fill="white"/>
+      </svg> 
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Class
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4 flex-col">
+      <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M880 112H144C126.3 112 112 126.3 112 144V880C112 897.7 126.3 912 144 912H880C897.7 912 912 897.7 912 880V144C912 126.3 897.7 112 880 112ZM787.6 345.5H723.7C673.6 345.5 663.9 369.3 663.9 404.3V481.4H783.5L767.9 602.1H663.9V912H539.2V602.2H434.9V481.4H539.2V392.4C539.2 289.1 602.3 232.8 694.5 232.8C738.7 232.8 776.6 236.1 787.7 237.6V345.5H787.6Z" fill="white"/>
+      </svg> 
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Class
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4 flex-col">
+      <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M880 112H144C126.3 112 112 126.3 112 144V880C112 897.7 126.3 912 144 912H880C897.7 912 912 897.7 912 880V144C912 126.3 897.7 112 880 112ZM787.6 345.5H723.7C673.6 345.5 663.9 369.3 663.9 404.3V481.4H783.5L767.9 602.1H663.9V912H539.2V602.2H434.9V481.4H539.2V392.4C539.2 289.1 602.3 232.8 694.5 232.8C738.7 232.8 776.6 236.1 787.7 237.6V345.5H787.6Z" fill="white"/>
+      </svg> 
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Class
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4 flex-col">
+      <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M880 112H144C126.3 112 112 126.3 112 144V880C112 897.7 126.3 912 144 912H880C897.7 912 912 897.7 912 880V144C912 126.3 897.7 112 880 112ZM787.6 345.5H723.7C673.6 345.5 663.9 369.3 663.9 404.3V481.4H783.5L767.9 602.1H663.9V912H539.2V602.2H434.9V481.4H539.2V392.4C539.2 289.1 602.3 232.8 694.5 232.8C738.7 232.8 776.6 236.1 787.7 237.6V345.5H787.6Z" fill="white"/>
+      </svg> 
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Class
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4 flex-col">
+      <svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M880 112H144C126.3 112 112 126.3 112 144V880C112 897.7 126.3 912 144 912H880C897.7 912 912 897.7 912 880V144C912 126.3 897.7 112 880 112ZM787.6 345.5H723.7C673.6 345.5 663.9 369.3 663.9 404.3V481.4H783.5L767.9 602.1H663.9V912H539.2V602.2H434.9V481.4H539.2V392.4C539.2 289.1 602.3 232.8 694.5 232.8C738.7 232.8 776.6 236.1 787.7 237.6V345.5H787.6Z" fill="white"/>
+      </svg> 
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Class
+      </p>
+    </div>
+  </div>
+</div>
+
+  <div id="Text_1" class="text-xl font-semibold">Primary Stack</div>
+  <div class="flex space-x-4 justify-between">  
+    <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white-transparent  mb-10">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      <p class="text-gray-700 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+    </div>
+  </div>
+</div>
 </div>
 
   <div id="Contact" class="container mx-auto mt-8 p-4 bg-gray-100 rounded-lg">
@@ -243,9 +386,10 @@
           <input type="submit" value="Submit" class="bg-blue-500 text-white p-2 rounded cursor-pointer hover:bg-blue-600">
       </form>
   </div>
+</div>
   <footer class="mt-8 p-4 bg-gray-800 text-white text-center">
       <p>©Copyright Reserved</p>
   </footer>
-  
+
 </body>
 </html>
